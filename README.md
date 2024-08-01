@@ -48,7 +48,7 @@ Redux Thunk is a middleware for Redux that allows you to write action creators t
 - MongoDB
 - Git
 
-  1. **Clone the repository:**
+1. **Clone the repository:**
     ```bash
     git clone https://github.com/Krishnadaskrish/Task-Manager.git
     cd Task manager
