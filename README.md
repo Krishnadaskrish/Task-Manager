@@ -23,7 +23,7 @@ Task Manager is a web application for managing tasks. It allows users to add, ed
 - Redux Thunk
 - Tailwind CSS
 
-  ### Backend
+### Backend
 
 - Node.js
 - Express.js
@@ -72,8 +72,9 @@ Redux Thunk is a middleware for Redux that allows you to write action creators t
 
     - Create a `.env` file in the `backend` directory with the following content:
         ```
-        MONGO_URI=mongodb://localhost:27017/task-manager
+        MONGO_URI=your_database_uri
         JWT_SECRET=your_jwt_secret
+        PORT = your_PORT
         ```
 
 4. **Run the application:**
