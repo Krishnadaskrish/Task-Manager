@@ -53,3 +53,67 @@ Redux Thunk is a middleware for Redux that allows you to write action creators t
     git clone https://github.com/Krishnadaskrish/Task-Manager.git
     cd Task manager
     ```
+
+2. **Install dependencies:**
+
+    - Install backend dependencies:
+        ```bash
+        cd server
+        npm install
+        ```
+
+    - Install frontend dependencies:
+        ```bash
+        cd client
+        npm install
+        ```
+
+3. **Set up environment variables:**
+
+    - Create a `.env` file in the `backend` directory with the following content:
+        ```
+        MONGO_URI=mongodb://localhost:27017/task-manager
+        JWT_SECRET=your_jwt_secret
+        ```
+
+4. **Run the application:**
+
+    - Start the backend server:
+        ```bash
+        cd server
+        npm start
+        ```
+
+    - Start the frontend server:
+        ```bash
+        cd client
+        npm start
+        ```
+
+The frontend application should now be running at `http://localhost:3000` and the backend server at `http://localhost:3001`.
+
+
+    The frontend application should now be running at `http://localhost:3000` and the backend server at `http://localhost:5000`.
+
+## Usage
+
+1. **Register a new user:**
+    - Click on the 'Register' button in the header and fill out the registration form.
+
+2. **Login:**
+    - Click on the 'Login' button in the header and fill out the login form.
+
+3. **Add a new task:**
+    - Click on the 'Add New Task' button and fill out the task details.
+
+4. **Edit a task:**
+    - Click on a task to open the edit modal and modify the task details.
+
+5. **Delete a task:**
+    - Click on the delete icon next to a task to remove it.
+
+6. **Upload tasks via CSV:**
+    - Click on the 'Upload CSV' button and select a CSV file to upload tasks.
+
+7. **Download tasks as CSV:**
+    - Click on the 'Download CSV' button to download the list of tasks as a CSV file.
