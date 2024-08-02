@@ -10,6 +10,10 @@ class TodoRepository {
     return Todo.find();
   }
 
+  async find(query) {
+    return Todo.find(query);
+  }
+
   async findById(id) {
     return Todo.findById(id);
   }

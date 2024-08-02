@@ -10,6 +10,7 @@ const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
 
 const createTodo = async (req, res) => {
+  console.log('jjj')
   try {
     const savedTodo = await CreateTodo.execute(req.body);
     res.status(201).json({
@@ -60,7 +61,7 @@ const updateTodo = async (req, res) => {
     res.status(200).json({
       status: 'success',
       message: 'Successfully updated todo',
-      data: updatedTodo,
+      updatedTodo,
     });
   } catch (err) {
     res.status(400).json({ message: err.message });
@@ -108,7 +109,9 @@ const downloadTodosCsv = async (req, res) => {
 const filterByStatus = async (req, res) => {
   try {
     const { status } = req.query;
+    console.log(req.query,'kk')
     const tasks = await FilterByStatus.execute(status);
+    console.log(tasks,'kkkcls')
     res.status(200).json({
       status: 'success',
       data: tasks,

@@ -5,7 +5,7 @@ class FilterByStatus {
     if (status === 'all') {
       return TodoRepository.findAll();
     } else {
-      return TodoRepository.findById({ status });
+      return TodoRepository.find({ status });
     }
   }
 }
