@@ -2,6 +2,10 @@
 
 Task Manager is a web application for managing tasks. It allows users to add, edit, delete, and view tasks. The application is built using React for the frontend and Node.js for the backend.
 
+##Clean Architecture
+
+This project adheres to the principles of Clean Architecture to ensure a modular, scalable, and maintainable codebase. Clean Architecture emphasizes the separation of concerns, making the system easier to test, maintain, and extend.
+
 ## Features
 
 - Add new tasks
