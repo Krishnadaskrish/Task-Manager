@@ -3,22 +3,7 @@
 Task Manager is a web application for managing tasks. It allows users to add, edit, delete, and view tasks. The application is built using React for the frontend and Node.js for the backend.
 
 ## Clean Architecture
-
 This project adheres to the principles of Clean Architecture to ensure a modular, scalable, and maintainable codebase. Clean Architecture emphasizes the separation of concerns, making the system easier to test, maintain, and extend.
-
-```plaintext
-src/
-├── entities/            # Domain models
-├── use_cases/
-│   ├── auth/            # Business logic and use cases
-│   └── todo/            
-├── infrastructure/
-│   ├── config/          # Database models and connection setup
-│   └── data/            # Integration with external systems and APIs
-└── interfaces/
-    ├── controllers/     # Request handling and response formatting
-    └── routes/
-    └── middileware/     # API routes and middleware
 
 ## Features
 
@@ -32,8 +17,8 @@ src/
 - Filter task according to the status of the task
 
 ## Demo video
-[scrnli_8_1_2024_11-43-21 PM.webm](https://github.com/user-attachments/assets/9a2e52f2-0460-4ece-bdd0-cfd8dcb103f4)
 
+[scrnli_8_1_2024_11-43-21 PM.webm](https://github.com/user-attachments/assets/12e62ef9-4fb1-483f-9f42-24051e4cf255)
 
 ## Technologies Used
 
@@ -62,9 +47,7 @@ Redux is a state management library for JavaScript applications. It helps manage
 
 Redux Thunk is a middleware for Redux that allows you to write action creators that return a function instead of an action. This is particularly useful for handling asynchronous operations, such as API calls. In this project, Redux Thunk is used to manage asynchronous actions like fetching tasks, logging in, and registering users. This helps keep the Redux actions clean and focused on state changes, while the asynchronous logic is handled in the thunks.
 
-## Demo video
 
-[scrnli_8_1_2024_11-43-21 PM.webm](https://github.com/user-attachments/assets/9a2e52f2-0460-4ece-bdd0-cfd8dcb103f4)
 
 ## API Documentation
 
