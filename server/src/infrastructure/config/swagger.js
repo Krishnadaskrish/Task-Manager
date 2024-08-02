@@ -17,8 +17,8 @@ const options = {
     ],
   },
   apis: [
-    path.join(__dirname, '../docs/auth.yaml'),
-    path.join(__dirname, '../docs/todo.yaml'),
+    path.join(__dirname, '../../docs/auth.yaml'),
+    path.join(__dirname, '../../docs/todo.yaml'),
   ],
 };
 
