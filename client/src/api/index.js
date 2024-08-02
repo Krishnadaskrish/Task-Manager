@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 
 
-const API_URL = 'http://localhost:3001'
+const API_URL = 'https://task-manager-hpkt.onrender.com'
 
 const handleError = (error) => {
   if (error.response) {
@@ -16,8 +16,15 @@ const handleError = (error) => {
 };
 
 export const register = async (userData) => {
-  const response = await axios.post(`${API_URL}/api/register`, userData);
+  try {
+    const response = await axios.post(`${API_URL}/api/register`, userData);
+  toast.success('successfully registered')
   return response.data;
+    
+  } catch (error) {
+    toast.error('error in login ')
+  }
+  
 };
 
 
@@ -26,10 +33,10 @@ export const loginUser = async (email, password) => {
     const response = await axios.post(`${API_URL}/api/login`, { email, password })
     localStorage.setItem("token", response.data.data);
 
-    toast.success()
+    toast.success('successfully Login')
     return response;
   } catch (error) {
-    throw error;
+    toast.error('error in login ')
   }
 };
 

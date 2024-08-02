@@ -1,0 +1,211 @@
+openapi: 3.0.0
+info:
+  title: Todo Manager API
+  version: 1.0.0
+  description: A simple API for managing todos
+
+servers:
+  - url: http://localhost:3001
+
+tags:
+  - name: Todos
+    description: Todo management
+
+paths:
+  /api/todos:
+    post:
+      summary: Create a new todo
+      tags:
+        - Todos
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Todo'
+      responses:
+        '201':
+          description: The todo was successfully created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Todo'
+        '500':
+          description: Internal server error
+
+    get:
+      summary: Retrieve a list of todos
+      tags:
+        - Todos
+      responses:
+        '200':
+          description: A list of todos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Todo'
+
+  /api/todos/{id}:
+    get:
+      summary: Retrieve a single todo by ID
+      tags:
+        - Todos
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: The ID of the todo to retrieve
+      responses:
+        '200':
+          description: A single todo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Todo'
+        '404':
+          description: Todo not found
+
+    put:
+      summary: Update a todo by ID
+      tags:
+        - Todos
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: The ID of the todo to update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Todo'
+      responses:
+        '200':
+          description: The todo was successfully updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Todo'
+        '400':
+          description: Bad request (e.g., invalid data)
+        '404':
+          description: Todo not found
+        '500':
+          description: Internal server error
+
+    delete:
+      summary: Delete a todo by ID
+      tags:
+        - Todos
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: The ID of the todo to delete
+      responses:
+        '200':
+          description: The todo was successfully deleted
+        '404':
+          description: Todo not found
+        '500':
+          description: Internal server error
+
+  /api/todos/upload:
+    post:
+      summary: Upload todos from a CSV file
+      tags:
+        - Todos
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: The todos were successfully uploaded
+        '500':
+          description: Internal server error
+
+  /api/download:
+    get:
+      summary: Download todos as a CSV file
+      tags:
+        - Todos
+      responses:
+        '200':
+          description: The CSV file was successfully downloaded
+          content:
+            text/csv:
+              schema:
+                type: string
+                format: binary
+
+  /api/filter:
+    get:
+      summary: Filter todos by status
+      tags:
+        - Todos
+      parameters:
+        - in: query
+          name: status
+          schema:
+            type: string
+          required: true
+          description: The status to filter todos by
+      responses:
+        '200':
+          description: The filtered todos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Todo'
+
+components:
+  schemas:
+    Todo:
+      type: object
+      required:
+        - title
+        - description
+      properties:
+        id:
+          type: string
+          description: The auto-generated ID of the todo
+        title:
+          type: string
+          description: The title of the todo
+        description:
+          type: string
+          description: The description of the todo
+        status:
+          type: string
+          enum:
+            - Pending
+            - Completed
+          description: The status of the todo
+        createdAt:
+          type: string
+          format: date-time
+          description: The date when the todo was created
+      example:
+        id: d5fE_asz
+        title: Test todo
+        description: This is a test todo
+        status: Pending
+        createdAt: 2024-08-02T00:00:00Z
