@@ -31,6 +31,8 @@ src/
 - authentication and authorization
 - Filter task according to the status of the task
 
+## Demo video
+
 
 ## Technologies Used
 
@@ -39,6 +41,7 @@ src/
 - React
 - Redux
 - Redux Thunk
+- Redux toolkit
 - Tailwind CSS
 
 ### Backend
