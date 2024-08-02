@@ -105,7 +105,7 @@ You can find the API documentation for this project at the following URL:
 The frontend application should now be running at `http://localhost:3000` and the backend server at `http://localhost:3001`.
 
 
-    The frontend application should now be running at `http://localhost:3000` and the backend server at `http://localhost:5000`.
+    The frontend application should now be running at `http://localhost:3000` and the backend server at `http://localhost:3001`.
 
 ## Usage
 
