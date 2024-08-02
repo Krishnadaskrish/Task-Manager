@@ -6,6 +6,20 @@ Task Manager is a web application for managing tasks. It allows users to add, ed
 
 This project adheres to the principles of Clean Architecture to ensure a modular, scalable, and maintainable codebase. Clean Architecture emphasizes the separation of concerns, making the system easier to test, maintain, and extend.
 
+```plaintext
+src/
+├── entities/            # Domain models
+├── use_cases/
+│   ├── auth/            # Business logic and use cases
+│   └── todo/            
+├── infrastructure/
+│   ├── config/          # Database models and connection setup
+│   └── data/            # Integration with external systems and APIs
+└── interfaces/
+    ├── controllers/     # Request handling and response formatting
+    └── routes/
+    └── middileware/     # API routes and middleware
+
 ## Features
 
 - Add new tasks
