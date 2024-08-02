@@ -32,8 +32,7 @@ src/
 - Filter task according to the status of the task
 
 ## Demo video
-
-[scrnli_8_1_2024_11-43-21 PM.webm](https://github.com/user-attachments/assets/d7e0cd07-1729-4c1e-af0a-79757f3fd55b)
+[scrnli_8_1_2024_11-43-21 PM.webm](https://github.com/user-attachments/assets/9a2e52f2-0460-4ece-bdd0-cfd8dcb103f4)
 
 
 ## Technologies Used
