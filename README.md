@@ -44,6 +44,13 @@ Redux Thunk is a middleware for Redux that allows you to write action creators t
 
 [scrnli_8_1_2024_11-43-21 PM.webm](https://github.com/user-attachments/assets/9a2e52f2-0460-4ece-bdd0-cfd8dcb103f4)
 
+## API Documentation
+
+You can find the API documentation for this project at the following URL:
+
+- [API Documentation](http://localhost:3001/api-docs)
+
+
 ## Getting Started
 
 ### Prerequisites
