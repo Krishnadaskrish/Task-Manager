@@ -7,10 +7,10 @@ const verifyToken = require('../middileware/Auth') // we can use auth middile fo
 router.post('/todos', createTodo);
 router.get('/todos', getTodos);
 router.get('/todos/:id', getTodoById);
-router.put('/todos/:id', updateTodo);
-router.delete('/todos/:id',deleteTodo)
-router.post('/todos/upload', upload.single('file'), uploadCsv);
-router.get('/download', downloadTodosCsv);
+router.put('/todos/:id',verifyToken, updateTodo);
+router.delete('/todos/:id',verifyToken,deleteTodo)
+router.post('/todos/upload',verifyToken, upload.single('file'), uploadCsv);
+router.get('/download',verifyToken, downloadTodosCsv);
 router.get('/filter',filterByStatus);
 
 
