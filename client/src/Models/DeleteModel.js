@@ -4,7 +4,6 @@ import { deleteTodoThunk } from "../features/todos/tudosThunk"; // Update with t
 
 function DeleteModal({ type, title,task, setIsDeleteModalOpen }) {
   const dispatch = useDispatch();
-  console.log(task,'kkkkkkkkkkkkkkkkkk')
 
   const handleDelete = async () => {
     try {

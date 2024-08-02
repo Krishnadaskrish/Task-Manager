@@ -43,7 +43,7 @@ function LoginModal({ setIsLoginModalOpen }) {
               id="email-input"
               type="email"
               className="bg-transparent px-4 py-2 outline-none focus:border-0 rounded-md text-sm border-[0.5px] border-gray-600 focus:outline-[#635fc7] outline-1 ring-0"
-              placeholder="e.g. example@example.com"
+              placeholder="your Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
