@@ -69,13 +69,13 @@ You can find the API documentation for this project at the following URL:
 
     - Install backend dependencies:
         ```bash
-        cd server
+        cd ./server
         npm install
         ```
 
     - Install frontend dependencies:
         ```bash
-        cd client
+        cd ./client
         npm install
         ```
 
