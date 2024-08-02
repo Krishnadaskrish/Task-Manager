@@ -33,6 +33,8 @@ src/
 
 ## Demo video
 
+[scrnli_8_1_2024_11-43-21 PM.webm](https://github.com/user-attachments/assets/d7e0cd07-1729-4c1e-af0a-79757f3fd55b)
+
 
 ## Technologies Used
 
