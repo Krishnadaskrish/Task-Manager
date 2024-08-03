@@ -88,8 +88,8 @@ You can find the API documentation for this project at the following URL:
 
     - Create a `.env` file in the `backend` directory with the following content:
         ```
-        MONGO_URI=your_database_uri
-        JWT_SECRET=your_jwt_secret
+        CONNECTION_STRING=your_database_uri
+        ACCESS_TOKEN_SECRET=your_jwt_secret
         PORT = your_PORT
         ```
 
